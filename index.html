@@ -1,153 +1,397 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Willie Sublet III</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type='text/css' media='screen' href="./styles/main.css">
-</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Willie Sublet III, Executive Strategist</title>
+<meta name="description" content="Willie Sublet III is an executive strategist and former Chief of Staff in Dallas/Fort Worth with 13+ years advising senior leaders, directing cross-functional initiatives, and strengthening organizations.">
+<meta name="theme-color" content="#0E2243">
+<meta property="og:title" content="Willie Sublet III, Executive Strategist">
+<meta property="og:description" content="Executive strategist and former Chief of Staff. Founder of RightTouch Solutions. Board leader and community builder in North Texas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://williesublet3.me/">
+<meta property="og:image" content="https://williesublet3.me/assets/images/willie-portrait.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPB1RP7F1S"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-MPB1RP7F1S');
 </script>
 
+<style>
+/* Plan: navy ground carried from the resume, one gold accent used only on navy, steel blue for roles.
+   Layout: dark hero with portrait, results strip, then a light single column of ruled sections. */
+:root{
+  --navy:#0E2243;
+  --navy-deep:#0A1B36;
+  --navy-line:#2F4670;
+  --ink:#1B2430;
+  --ink-soft:#364152;
+  --muted:#4A5565;
+  --steel:#1F4E8C;
+  --gold:#E2BC73;
+  --gold-hover:#F0D08E;
+  --paper:#F5F6F8;
+  --card:#FFFFFF;
+  --rule:#C5CEDB;
+  --on-navy:#C9D4E5;
+  --display:'Newsreader',Georgia,'Times New Roman',serif;
+  --body:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6}
+a{color:var(--steel)}
+a:hover{color:var(--navy)}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+h1,h2,h3{text-wrap:balance}
+.wrap{max-width:1120px;margin:0 auto;padding-left:24px;padding-right:24px}
+
+/* Hero */
+.hero{background:var(--navy);color:#fff}
+.hero-inner{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding-top:72px;padding-bottom:64px}
+.hero-copy{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:22px}
+.eyebrow{font-size:15px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.hero h1{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(44px,7vw,76px);line-height:1.02;letter-spacing:-.01em}
+.subtitle{font-family:var(--display);font-size:clamp(23px,3vw,30px);line-height:1.25;font-weight:500;color:#DCE4F0}
+.tagline{font-family:var(--display);font-style:italic;font-size:21px;line-height:1.4;color:var(--gold);max-width:36ch}
+.intro{margin:0;max-width:60ch;font-size:19px;line-height:1.6;color:var(--on-navy)}
+.focus{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.focus li{padding:7px 14px;border:1px solid var(--navy-line);background:#12294D;border-radius:999px;font-size:15px;font-weight:600;color:#DCE4F0}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:6px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:6px;font-size:17px;font-weight:600;text-decoration:none}
+.btn-primary{background:var(--gold);color:var(--navy);font-weight:700}
+.btn-primary:hover{background:var(--gold-hover);color:var(--navy)}
+.btn-ghost{border:2px solid #8FA3C2;color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12);color:#fff}
+.contact-line{font-size:16px;color:var(--on-navy)}
+.contact-line a{color:var(--on-navy)}
+.hero-photo{flex:0 1 380px;min-width:260px;margin:0 auto}
+.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:12px;border:1px solid var(--navy-line)}
+
+/* Results strip */
+.results{border-top:1px solid var(--navy-line);background:var(--navy-deep)}
+.results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;padding-top:36px;padding-bottom:36px;margin-top:0;margin-bottom:0;list-style:none}
+.result-num{display:block;font-family:var(--display);font-size:48px;font-weight:700;line-height:1;color:var(--gold)}
+.result-label{display:block;margin-top:6px;font-size:16px;line-height:1.4;color:var(--on-navy)}
+
+/* Sections */
+.section{display:flex;flex-wrap:wrap;gap:28px 64px;padding-top:56px;padding-bottom:24px}
+.section h2{flex:0 1 260px;margin:0;font-family:var(--display);font-size:40px;line-height:1.1;font-weight:600;color:var(--navy)}
+.section-body{flex:1 1 520px;min-width:0}
+.section.first{padding-top:80px}
+.lead{margin:0 0 18px;font-size:20px;line-height:1.65;max-width:68ch}
+.para{margin:0;font-size:18px;line-height:1.65;max-width:68ch;color:var(--ink-soft)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.chips li{padding:9px 16px;background:var(--card);border:1px solid var(--rule);border-radius:999px;font-size:16px;font-weight:500;color:var(--navy)}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 0;padding:0;list-style:none}
+.tools li{padding:7px 14px;background:#E6EBF3;border-radius:6px;font-size:15px;font-weight:600;color:var(--navy)}
+
+.recognition{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:0;padding:0;list-style:none}
+.recognition li{background:var(--card);border:1px solid var(--rule);border-top:4px solid var(--navy);border-radius:8px;padding:22px 22px 26px;font-family:var(--display);font-size:23px;line-height:1.25;font-weight:600;color:var(--navy)}
+
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.quote{margin:0;background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.quote p{margin:0;font-family:var(--display);font-size:22px;line-height:1.4;color:var(--navy)}
+.quote cite{font-style:normal;font-size:16px;color:var(--muted)}
+.more-link{display:inline-block;margin-top:20px;font-weight:600}
+
+/* Experience */
+.experience{padding-top:56px;padding-bottom:24px}
+.experience h2{margin:0 0 24px;font-family:var(--display);font-size:40px;line-height:1.1;font-weight:600;color:var(--navy)}
+.job{display:flex;flex-wrap:wrap;gap:20px 48px;padding:36px 0;border-top:1px solid var(--rule)}
+.job:first-of-type{border-top:2px solid var(--navy)}
+.job:last-of-type{border-bottom:2px solid var(--navy)}
+.job-meta{flex:0 1 280px;display:flex;flex-direction:column;gap:6px}
+.job-dates{font-size:15px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.job-meta h3{margin:0;font-family:var(--display);font-size:30px;line-height:1.15;font-weight:600;color:var(--navy)}
+.job-place{font-size:17px;color:var(--muted)}
+.job-main{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.job-title{font-size:19px;font-weight:700;color:var(--steel)}
+.bullets{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
+.bullets li{position:relative;padding-left:22px;font-size:17px;line-height:1.55}
+.bullets li::before{content:"";position:absolute;left:0;top:10px;width:9px;height:9px;background:var(--steel);border-radius:2px}
+
+/* Education */
+.edu-row{padding:20px 0;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px}
+.edu-row:last-child{border-bottom:0}
+.edu-name{font-size:21px;font-weight:700;color:var(--navy);line-height:1.3}
+.edu-school{font-size:17px;color:var(--muted)}
+.edu-when{font-size:16px;font-weight:600;color:var(--steel)}
+
+/* Community */
+.community{padding-top:56px;padding-bottom:88px}
+.community h2{margin:0 0 28px;font-family:var(--display);font-size:40px;line-height:1.1;font-weight:600;color:var(--navy)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:10px}
+.card-role{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--steel)}
+.card h3{margin:0;font-family:var(--display);font-size:26px;line-height:1.2;font-weight:600;color:var(--navy)}
+.card p{margin:0;font-size:17px;line-height:1.55;color:var(--ink-soft)}
+
+/* Footer */
+.footer{background:var(--navy);color:#fff}
+.footer-inner{display:flex;flex-wrap:wrap;gap:32px 64px;align-items:center;justify-content:space-between;padding-top:64px;padding-bottom:64px}
+.footer h2{margin:0 0 12px;font-family:var(--display);font-size:40px;line-height:1.1;font-weight:600}
+.footer p{margin:0;max-width:52ch;font-size:19px;color:var(--on-navy)}
+.footer-contact{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.footer-note{font-size:17px;color:var(--on-navy)}
+
+@media (max-width:600px){
+  .hero-inner{padding-top:48px;padding-bottom:48px;gap:32px}
+  .section.first{padding-top:56px}
+  .section h2,.experience h2,.community h2,.footer h2{font-size:34px}
+  .job-meta h3{font-size:27px}
+}
+@media print{
+  .hero,.results,.footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
 <body>
 
-    <div id="container--main">
-        <section id="wrapper--hero" class="section--page">
-            <img id="profile-pic" src="./assets/images/09.jpg">
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow">Dallas/Fort Worth, Texas</div>
+      <h1>Willie Sublet III</h1>
+      <div class="subtitle">Executive strategist and former Chief of Staff</div>
+      <div class="tagline">&ldquo;A Force Multiplier Dedicated to Guiding the Professional Growth in Others.&rdquo;</div>
+      <p class="intro">I advise senior leaders, direct cross-functional initiatives, and strengthen organizational performance. Thirteen years inside national professional services firms, now advising nonprofit executives and boards through RightTouch Solutions.</p>
+      <ul class="focus">
+        <li>Executive Strategic Partnership</li>
+        <li>Organizational Operations</li>
+        <li>Stakeholder Leadership</li>
+      </ul>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:wsublet@gmail.com">Email Willie</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/willie-sublet3/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="testimonials.html">Recommendations</a>
+        <a class="btn btn-ghost" href="assets/Willie-Sublet-III-Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      </div>
+      <div class="contact-line"><a href="mailto:wsublet@gmail.com">wsublet@gmail.com</a> &nbsp;|&nbsp; <a href="tel:+18173000626">(817) 300-0626</a></div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/images/willie-portrait.jpg" width="900" height="1124" alt="Portrait of Willie Sublet III in a gray blazer and checked shirt against a blue wall">
+    </div>
+  </div>
 
-            <div>
-                <h1 id="user-name">Willie Sublet III</h1>
-                <p id="bio"><a><h3><i>A Force Multiplier Dedicated to Guiding the Professional Growth in Others.</h3></i></a></p>
-                <p id="email">👉 wsublet@gmail.com</p>
-            </div> 
-        </section>
+  <div class="results">
+    <ul class="wrap results-grid">
+      <li><span class="result-num">2,000+</span><span class="result-label">experienced and campus hires onboarded at RSM</span></li>
+      <li><span class="result-num">$3.8M</span><span class="result-label">capital and facility relocation led as board president</span></li>
+      <li><span class="result-num">$2.6M</span><span class="result-label">client revenue generation supported at RightTouch</span></li>
+      <li><span class="result-num">$1.1M</span><span class="result-label">United Way goal exceeded at EY</span></li>
+    </ul>
+  </div>
+</header>
 
-        <section class="section--page">
+<main>
 
-            <div id="socials--list">
-                <a href="testimonials.html"><span>🏆 </span>Testimonials/Recommendations</a>
-                <a href="https://www.linkedin.com/in/willie-sublet3/" target="_blank">🌍 Linkedin</a>
-                <a href="./assets/Resume of Willie Sublet III.pdf" target="_blank">📝 Download Resume</a>
-            </div>
+  <section class="wrap section first" aria-labelledby="profile-h">
+    <h2 id="profile-h">Executive profile</h2>
+    <div class="section-body">
+      <p class="lead">Executive strategist and former Chief of Staff with more than 13 years of experience advising senior leaders, directing cross-functional initiatives, and strengthening organizational performance across national professional services organizations.</p>
+      <p class="para">A trusted partner in executive prioritization, financial and operational oversight, stakeholder engagement, talent development, and organizational transformation. Founder of RightTouch Solutions, providing strategic advisory services to nonprofit executives and boards. An established North Texas civic and community leader with deep experience in governance, institutional partnerships, and leadership development.</p>
+    </div>
+  </section>
 
-        </section>
+  <section class="wrap section" aria-labelledby="comp-h">
+    <h2 id="comp-h">Core competencies</h2>
+    <div class="section-body">
+      <ul class="chips">
+        <li>Executive Counsel &amp; Prioritization</li>
+        <li>Strategic Planning &amp; Implementation</li>
+        <li>Budget Coordination &amp; Financial Reporting</li>
+        <li>Executive Office Leadership</li>
+        <li>Confidential Communications</li>
+        <li>Staff Management &amp; Development</li>
+        <li>Organizational Culture &amp; Change</li>
+        <li>Cross-Functional Program Leadership</li>
+        <li>Governance &amp; Board Relations</li>
+        <li>Community &amp; Institutional Partnerships</li>
+        <li>Continuous Improvement &amp; Performance Metrics</li>
+      </ul>
+    </div>
+  </section>
 
-        <section class="section--page">
-            <h2>Summary</h2>
-            <ul id="qualifications--list">
-                <p>Accomplished leader with over 13 years of experience in administrative services, strategic planning, operational efficiency, and team development. Proven expertise in aligning organizational objectives with efficient service delivery, driving innovation, and fostering inclusive environments. Skilled in managing relationships with stakeholders at all levels, implementing transformative solutions, and leveraging technology to enhance productivity. Adept at leading change management efforts and coaching high-performing teams across geographically dispersed locations. Known for strong executive presence, data-driven decision-making, and ability to deliver results in dynamic and fast-paced environments.</p>
-                
-            </ul>
-        </section>
+  <section class="wrap section" aria-labelledby="rec-h">
+    <h2 id="rec-h">Recognition</h2>
+    <div class="section-body">
+      <ul class="recognition">
+        <li>Target Lean Transformation Leader</li>
+        <li>Pioneering DFW&#8209;ABA&rsquo;s Organizational Revamp</li>
+        <li>EY Culture COIN Award</li>
+      </ul>
+    </div>
+  </section>
 
-        <section class="section--page">
-            <h2>Key Accomplishments</h2>
-        
-            <div class="card--project">
-                <a>🏆 Target Lean Transformation Leader</a>
-                
-            </div>
-        
-            <div class="card--project">
-                <a>🏆 Pioneering DFW-ABA's Organizational Revamp</a>
-            </div>
-        
-            <div class="card--project">
-                <a>🏆 EY Culture COIN Award </a>
-            </div>
-              
-        </section>
+  <section class="wrap section" aria-labelledby="voices-h">
+    <h2 id="voices-h">What colleagues say</h2>
+    <div class="section-body">
+      <div class="quotes">
+        <figure class="quote">
+          <p>&ldquo;You continue to be a trusted advisor in many areas of Talent and you care about the people you work with.&rdquo;</p>
+          <figcaption><cite>Nicole Lindsey, Director of Location Services, RSM US LLP</cite></figcaption>
+        </figure>
+        <figure class="quote">
+          <p>&ldquo;You have a winning attitude and are always living the RSM core values.&rdquo;</p>
+          <figcaption><cite>Porchia Barrett, Tax Senior Manager, RSM US LLP</cite></figcaption>
+        </figure>
+      </div>
+      <a class="more-link" href="testimonials.html">Read more recommendations</a>
+    </div>
+  </section>
 
-        
-        <section class="section--page">
-            <h2>Education</h2>
-        
-            <div class="card--project">
-                <h3>🏫 Adler University</h3> <a>(PH.D. Organizational Leadership) [Graduation 2027]</a>
-                <h3>🏫 Texas A&M University - Commerce</h3> <a>(M.S. Management & B.A.A.S. Organizational Leadership)</a>
-            </div>
-        
-             
-        </section>
+  <section class="wrap experience" aria-labelledby="exp-h">
+    <h2 id="exp-h">Professional experience</h2>
 
-        <section class="section--page">
-            <h2>Core Competencies</h2>
-        
-            <div id="wrapper--techstack__items">
-                <div class="card--techstack"><span>Project Management</span></div>
-                <div class="card--techstack"><span>Data Analysis</span></div>
-                <div class="card--techstack"><span>Operational Efficiency</span></div>
-                <div class="card--techstack"><span>Process Mapping</span></div>
-                <div class="card--techstack"><span>Lean Six Sigma (Green Belt)</span></div>
-                <div class="card--techstack"><span>Confidentiality</span></div>
-                <div class="card--techstack"><span>Microsoft Office Suite</span></div>
-                <div class="card--techstack"><span>Database Administration</span></div>
-                <div class="card--techstack"><span>Leadership Development</span></div>
-                <div class="card--techstack"><span>Staff Coaching & Mentoring</span></div>
-                <div class="card--techstack"><span>Cross-Functional Collaborator</span></div>
+    <article class="job">
+      <div class="job-meta">
+        <div class="job-dates">Nov 2022 to Present</div>
+        <h3>RightTouch Solutions</h3>
+        <div class="job-place">Fort Worth, TX</div>
+      </div>
+      <div class="job-main">
+        <div class="job-title">Executive Business Partner &amp; Organizational Strategist</div>
+        <ul class="bullets">
+          <li><strong>Executive advisory and governance.</strong> Founded and operate an independent advisory practice helping nonprofit founders, executives, and boards strengthen governance, strategic direction, policies, and execution capacity.</li>
+          <li><strong>Strategy and risk.</strong> Guide senior decision-makers through organizational assessments, operating model redesign, bylaws and policy updates, and risk mitigation.</li>
+          <li><strong>Board and leadership development.</strong> Facilitate executive and board sessions, strategic retreats, and governance workshops that turn complex decisions into action plans with clear responsibilities.</li>
+          <li><strong>Operational infrastructure.</strong> Build operating procedures, onboarding frameworks, documentation systems, and management dashboards.</li>
+          <li><strong>Revenue and sustainability.</strong> Advise clients on revenue generation and sustainability, including assistance managing $2.6 million in client revenue generation across multiple concurrent engagements.</li>
+        </ul>
+      </div>
+    </article>
 
-            </div>
-        </section>
+    <article class="job">
+      <div class="job-meta">
+        <div class="job-dates">Jan 2023 to Aug 2024</div>
+        <h3>RSM US LLP</h3>
+        <div class="job-place">Dallas, TX</div>
+      </div>
+      <div class="job-main">
+        <div class="job-title">North Texas Inclusion Leader / Talent Specialist</div>
+        <ul class="bullets">
+          <li><strong>Team leadership.</strong> Managed and coached a 15-member team and partnered with human resources, payroll, learning and development, and global service teams.</li>
+          <li><strong>Talent operations.</strong> Directed onboarding and integration for more than 2,000 experienced and campus hires, contributing to a 30% increase in new-hire satisfaction and a 20% reduction in onboarding time.</li>
+          <li><strong>Process improvement.</strong> Redesigned administrative workflows to cut related workload by 40%. Built reporting and knowledge-transfer systems that reduced document retrieval times by 25% and inquiry resolution times by 40%.</li>
+          <li><strong>Leadership pipeline.</strong> Created and led a monthly leadership accelerator that connected emerging professionals with senior executives. More than 20 participants gained promotions, priority client assignments, and speaking opportunities. Also served on the national steering committee of the African American Employee Network.</li>
+        </ul>
+      </div>
+    </article>
 
-        <section id="work-history-wrapper" class="section--page">
-            <h2>Work History</h2>
+    <article class="job">
+      <div class="job-meta">
+        <div class="job-dates">Nov 2018 to Jan 2023</div>
+        <h3>RSM US LLP</h3>
+        <div class="job-place">Dallas, TX</div>
+      </div>
+      <div class="job-main">
+        <div class="job-title">Chief of Staff, National Tax Strategic Management Leader</div>
+        <ul class="bullets">
+          <li><strong>Executive partnership.</strong> Served as a strategic and operational partner to national and regional tax executives, connecting leadership priorities to work across service lines, business units, and dispersed teams.</li>
+          <li><strong>Executive office leadership.</strong> Managed executive office operations, sensitive correspondence, meeting readiness, and continuity of critical projects during leadership absences.</li>
+          <li><strong>Cross-regional alignment.</strong> Acted as liaison among the national leader, the Tax Leadership Team, and Central Region stakeholders, contributing to a reported 35% improvement in collaboration.</li>
+          <li><strong>Initiative execution.</strong> Directed complex multi-state initiatives from planning through delivery. Developed repeatable workflows that contributed to a 20% improvement in operational efficiency.</li>
+          <li><strong>Advisory council.</strong> Facilitated the Tax Practice Advisory Council, increasing innovation pipeline contributions by 15%.</li>
+          <li><strong>Financial and compensation support.</strong> Supported oversight of approximately $2 million tied to partner compensation and national team composition.</li>
+        </ul>
+      </div>
+    </article>
 
-            <div class="line-break"></div>
-            <div class="card--work-history">
-                <h1>RightTouch Solutions</h1>
-                <p>11/2022 - Current</p>
-                <strong>💼 Organizational Strategist | RightTouch Solution</strong>
-                
-                <p>As an Organizational Strategist at RightTouch Solutions, I help mission-driven organizations navigate change, strengthen infrastructure, and build strategies that drive meaningful, long-term impact. I specialize in aligning vision with execution—developing strategic plans, streamlining operations, and leading compliance-focused restructures that improve efficiency and reduce overhead.</p>
+    <article class="job">
+      <div class="job-meta">
+        <div class="job-dates">May 2013 to Nov 2018</div>
+        <h3>Ernst &amp; Young (EY)</h3>
+        <div class="job-place">Dallas, TX</div>
+      </div>
+      <div class="job-main">
+        <div class="job-title">Business Development Operations Champion</div>
+        <ul class="bullets">
+          <li><strong>Operations coordination.</strong> Coordinated work among business development, marketing, finance, and operations teams, reducing project turnaround time by 20%.</li>
+          <li><strong>Budget and financial oversight.</strong> Managed a $1.6 million budget while handling financial reporting, resource planning, and confidential executive and client information.</li>
+          <li><strong>Community partnerships.</strong> Led the firm&rsquo;s United Way campaign to exceed a $1.1 million goal while increasing employee participation by 15%.</li>
+          <li><strong>Professional development.</strong> Led programming through the Black Professional Network and a firm-sponsored Toastmasters chapter.</li>
+          <li><strong>Executive relationships.</strong> Managed complex executive calendars and cross-departmental meetings, and arranged domestic and international travel.</li>
+        </ul>
+      </div>
+    </article>
+  </section>
 
-                <p>I facilitate board retreats and leadership workshops that promote alignment, sharpen governance, and inspire action. I also coach executives and board members on stakeholder engagement, sustainability, and operational clarity.</p>
-                    
-                <p>My work has led to stronger leadership pipelines, increased engagement, and measurable growth in funding through grants and partnerships. At the core, I equip organizations to lead with purpose, operate with excellence, and grow with intention.</p>            
-                               
-            </div>
+  <section class="wrap section" aria-labelledby="edu-h">
+    <h2 id="edu-h">Education and credentials</h2>
+    <div class="section-body">
+      <div class="edu-row">
+        <div><div class="edu-name">Ph.D., Organizational Leadership</div><div class="edu-school">Adler University, Chicago</div></div>
+        <div class="edu-when">In progress</div>
+      </div>
+      <div class="edu-row">
+        <div><div class="edu-name">Master of Science, Management</div><div class="edu-school">Texas A&amp;M University, Commerce</div></div>
+        <div class="edu-when">2024</div>
+      </div>
+      <div class="edu-row">
+        <div><div class="edu-name">Bachelor of Applied Arts and Science, Organizational Leadership</div><div class="edu-school">Texas A&amp;M University, Commerce</div></div>
+        <div class="edu-when">2022</div>
+      </div>
+      <div class="edu-row" style="flex-direction:column">
+        <div class="edu-name">Lean Six Sigma Green Belt</div>
+        <ul class="tools">
+          <li>Excel</li><li>Power BI</li><li>SharePoint</li><li>Workday</li><li>ServiceNow</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-            
-            <div class="line-break"></div>
-            <div class="card--work-history">
-                <h1>RSM US LLP</h1>
-                <p>05/2013 - 08/2024</p>
-                <strong>💼 North Texas Inclusion Leader | RSM US LLP</strong>
-                
-                <p>As the North Texas Inclusion Leader, I led the strategic development and execution of diversity, equity, and inclusion (DEI) initiatives across the Texas-Oklahoma region. I spearheaded efforts to drive a 25% increase in engagement within Culture, Diversity, and Inclusion (CDI) initiatives, partnering closely with senior stakeholders to ensure that DEI programs aligned with organizational goals. I implemented a comprehensive Employee Resource Group (ERG) governance framework, resulting in a 30% increase in project completion rates and a 15% improvement in cross-functional collaboration. Additionally, I launched the Early Identification Program to create a diverse talent pipeline, engaging students and community groups to increase their interest in corporate career paths. Through my efforts, DEI metrics were established, tracked, and used to provide leadership with data-driven insights that resulted in a 20% increase in program effectiveness.</p>
+  <section class="wrap community" aria-labelledby="comm-h">
+    <h2 id="comm-h">Board and community leadership</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-role">Board President</div>
+        <h3>Dallas/Fort Worth Alliance of Black Accountants</h3>
+        <p>Lead a 12-member board in governance, strategic planning, and financial sustainability. Directed a comprehensive rebranding and restructuring, strengthened partnerships across 30+ campuses, and expanded student development and mentorship.</p>
+      </div>
+      <div class="card">
+        <div class="card-role">Board President</div>
+        <h3>SiNaCa Studios</h3>
+        <p>Lead a six-member board through strategic planning, governance oversight, and a $3.8 million capital and facility relocation for a Fort Worth glass arts nonprofit with 12 employees.</p>
+      </div>
+      <div class="card">
+        <div class="card-role">Board Member</div>
+        <h3>Treetops School International</h3>
+        <p>Support governance, policy development, and procedural improvements during the restructuring of a public charter school, with an emphasis on accountability and operational effectiveness.</p>
+      </div>
+      <div class="card">
+        <div class="card-role">Accounting Advisory Committee Co-Chair</div>
+        <h3>Dallas College</h3>
+        <p>Advise on curriculum alignment, workforce readiness, and industry expectations, working with academic and industry leaders to prepare students for careers in finance and accounting.</p>
+      </div>
+      <div class="card">
+        <div class="card-role">Social Engagement Chair</div>
+        <h3>Leadership Fort Worth</h3>
+        <p>Lead community engagement and volunteer initiatives that strengthen relationships among business and civic leaders and create opportunities for collaboration and service.</p>
+      </div>
+    </div>
+  </section>
+</main>
 
-                <p>Incorporating Lean Six Sigma methodologies, I streamlined administrative processes, reducing workloads by 40% and improving access to key information by 20%. I built strong relationships with Employee Resource Groups (ERGs) and senior leadership, ensuring seamless execution of DEI programs. Additionally, I led the onboarding of over 2,000 employees, resulting in a 30% boost in new hire satisfaction. My contributions to digital transformation and process optimization enhanced the efficiency of DEI processes, ensuring sustainability and measurable outcomes.</p>
-               
-                <strong>💼 Central Region Project Coordinator - Operations | RSM US LLP</strong>
-                
-                <p>In my role as Chief of Staff and Project Coordinator for Central Region Operations, I provided strategic leadership and execution of critical initiatives, ensuring alignment with corporate objectives and delivering a 20% improvement in operational efficiency. I managed the day-to-day operations of the National Tax Strategic Management Leader’s office, overseeing long-range planning and stepping in during leadership absences to maintain project momentum. My project management skills were demonstrated in directing complex, high-impact projects, consistently completing them ahead of schedule and mitigating risks effectively.</p>
-
-                <p>As a central liaison between senior leaders, I facilitated communication and collaboration across regions, resulting in a 35% improvement in teamwork. I introduced productivity tools and streamlined processes across service lines, driving continuous improvement efforts and enhancing operational capabilities. Additionally, I championed diversity initiatives as Executive Sponsor for the African American Employee Network Group (ENG), boosting engagement by 25% and fostering a more inclusive workplace culture.</p>
-               
-            </div>
-
-            <div class="line-break"></div>
-        
-            <div class="card--work-history">
-                <h1>EY - US (formerly Ernst & Young)</h1>
-                <strong>💼 Business Development Operations Champion | EY - US</strong>
-                <p>05/2013 - 11/2018</p>
-                <p>At EY, I served as a cross-departmental leader, coordinating efforts between multiple teams to streamline project execution and reduce delivery times by 20%. I was instrumental in policy development and research, ensuring that policies were implemented effectively to meet critical deadlines. My leadership extended to community engagement, where I led the United Way CBS Campaign, surpassing a $1.1 million fundraising goal with a 15% increase in participation.</p>
-
-                <p>In addition to driving external initiatives, I played a key role in advancing internal professional development. As the Professional Development Chair for the Black Professional Network, I led programs that promoted the growth and success of network members. I also served as Vice President of Education and Membership for a firm-sponsored Toastmasters group, fostering a culture of learning and development, which increased member engagement and participation. My contributions were recognized through numerous internal accolades, highlighting my commitment to driving both business results and professional development initiatives.</p>
-
-            </div>
-        </section>
-
-
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>
+      <h2>Let us talk</h2>
+      <p>I welcome conversations about executive strategy, operations leadership, and organizational governance.</p>
+    </div>
+    <div class="footer-contact">
+      <a class="btn btn-primary" href="mailto:wsublet@gmail.com">wsublet@gmail.com</a>
+      <div class="footer-note"><a href="tel:+18173000626" style="color:inherit">(817) 300-0626</a> &nbsp;|&nbsp; Dallas/Fort Worth Metroplex</div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
